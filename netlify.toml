@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "https://tnk.netlify.com/*"
-  to = "https://tnk-studio.org/*"
+  from = "https://tnk.netlify.com"
+  to = "https://tnk-studio.org"
   status = 301
   force = true
 
