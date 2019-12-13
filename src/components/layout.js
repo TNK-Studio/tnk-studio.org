@@ -8,9 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import bg from '../images/bg.jpg'
+import '../styles/tailwind.css';
+
 
 import Header from "./header"
-import "./layout.css"
+// import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,24 +27,19 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div class="bg-cover h-screen" style={{ backgroundImage: `url(${bg})` }} >
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
+        class="max-w-4xl mx-auto"
       >
         <main>{children}</main>
-        <footer>
+        <footer class="text-center mt-10">
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> | Data From <a href="https://www.notion.so/gatsby-starter-notion-2c5e3d685aa341088d4cd8daca52fcc2">Notion Database</a>
+          <a href="https://www.gatsbyjs.org" class="text-blue-700">Gatsby</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

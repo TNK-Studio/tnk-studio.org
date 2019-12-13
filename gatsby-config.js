@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby ❤️ Notion`,
-    description: `build site with gatsby & notion`,
-    author: `@mayneyao`,
+    title: `TNK Studio`,
+    description: ``,
+    author: `@tnk-studio`,
   },
   plugins: [
     {
@@ -10,13 +10,18 @@ module.exports = {
       options: {
         sourceConfig: [
           {
-            name: 'posts',
-            table: 'https://www.notion.so/4b50defc60ce4e89a6539f511d9d946f?v=8e71dde4479040b5a3e6ca0d91d3d8e6',
-            cacheType: 'html'
+            name: 'members',
+            table: 'https://www.notion.so/d204c702f6fa414a95eb0bc312f3e3b0?v=750a2f63558d4b18bd9e2f3ea7741afe',
+            cacheType: 'static'
           },
           {
-            name: 'books',
-            table: 'https://www.notion.so/4ae9328e650945eb9adbd882b3b453d3?v=0966bdbd0645437cbcc62e6a933e241c',
+            name: 'tools',
+            table: 'https://www.notion.so/9168dcfae89b44418692cec411690928?v=95bb880b8ed449b18576c96c8c6f676e',
+            cacheType: 'static'
+          },
+          {
+            name: 'projects',
+            table: 'https://www.notion.so/8f954f7cc5154a5eaa48d9c3e7703cd7?v=0716e50e28064d36896e5cb52886bee5',
             cacheType: 'static'
           }
         ]
@@ -32,7 +37,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

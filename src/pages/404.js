@@ -1,14 +1,13 @@
 import React from "react"
+import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import img404 from '../images/clip-page-not-found.png'
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  <div class="flex justify-center items-center bg-cover h-screen flex-col" style={{ backgroundImage: `url(${img404})` }}>
+    <p class="text-lg text-gray-500">Rua~ 你来到了啥都没有的神秘空间</p>
+    <p><Link to="/" class="text-indigo-500">go back</Link></p>
+  </div>
 )
 
 export default NotFoundPage
