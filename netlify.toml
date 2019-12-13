@@ -2,7 +2,7 @@
   from = "https://tnk.netlify.com/*"
   to = "https://tnk-studio.org/*"
   status = 301
-  force = false
+  force = true
 
 [[headers]]
   for = "*.js"
